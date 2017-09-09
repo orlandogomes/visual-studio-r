@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "IntroR-VS2017", "IntroR-VS2017\IntroR-VS2017.rxproj", "{56A585BA-6D74-4027-92E6-015BA0637E01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56A585BA-6D74-4027-92E6-015BA0637E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A585BA-6D74-4027-92E6-015BA0637E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A585BA-6D74-4027-92E6-015BA0637E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A585BA-6D74-4027-92E6-015BA0637E01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A689945-B78D-4A99-BCF1-93908FD4D0A9}
+	EndGlobalSection
+EndGlobal
