@@ -1,57 +1,85 @@
-#Usando o R no Visual Studio 2017
+#R Tools no Visual Studio 2017
 
 #Diretorio
 getwd()
+setwd("diretorio")
 
-#Plot
-plot(mpg ~ wt, data = mtcars)
+#Pacotes
+install.packages("ggplot2")
+library("ggplot2")
 
-#Export de Dados
-write.csv(airquality, file = "airquality.csv")
-#Leitura de Dados
-air_data <- read.csv("airquality.csv")
-head(air_data, n = 10)
+#Leitura e Export de Dados
+write.csv(mtcars, file = "mtcars.csv")
+mt_data <- read.csv("mtcars.csv")
+
+str(mt_data)
 
 #Operações
-a <- 10
-b <- 20
+a <- 1
+b <- 3
 c <- a + b
 c
 
+
 #Vetores
-a <- c(1:10)
-b <- c(11:20)
-c <- a * b
-c
+v1 <- c(1, 2, 3, 4)
+v2 <- c(4, 5, 6)
+v3 <- v1 + v2
+v3
 
-#Sequencias
-s1 <- seq(1, 10, by = 0.2)
-r1 <- rep(c(0, 1, 2), times = 10)
+#Rbind x Cbind
+v1 <- c(1:5)
+v2 <- c(1:5)
 
-s1
-r1
+cbind <- cbind(v1, v2)
+cbind
+rbind <- rbind(v1, v2)
+rbind
 
 #Matriz
-m1 <- matrix(1:8, nrow = 3, ncol = 3)
-m2 <- matrix(9:17, nrow = 3, ncol = 3)
-m3 <- m1 + m2
+m1 <- matrix(1:9, ncol = 3, nrow = 3)
+m2 <- matrix(1:9, ncol = 3, nrow = 3)
+m3 <- m1 * m2
+m1
+m2
 m3
 
-#Produtos Microsoft
-nome <- c("SharePoint", "PowerBI", "Visual Studio")
-ID <- c(1, 2, 3)
-Usada <- c(TRUE, FALSE, TRUE)
-produtos <- data.frame(nome, ID, Usada)
+#Data Frame 
+nome <- c("Boneca", "Carrinho", "Autorama")
+estado <- c(TRUE, FALSE, TRUE)
+tempo <- c(1, 2, 3)
+
+brinquedo <- data.frame(nome, estado, tempo)
+brinquedo
 
 #Graficos
+head(airquality, n = 10)
+
+
+#Plot Simples
 plot(mpg ~ wt, data = mtcars)
-plot(Ozone ~ Solar.R, data = airquality)
 
-#Modelos - Regressão Linear Simples
-mod1 <- lm(Ozone ~ Solar.R + Wind, data = airquality)
-summary(mod1)
-cor(airquality)
+#Geom Point (Solar x Ozone)
+ggplot(airquality, aes(x = Solar.R, y = Ozone)) +
+   geom_point(color = c("blue")) +
+   ggtitle("Grafico") +
+   labs(x = "Raios Solares", y = "Ozonio") +
+   theme_bw()
 
-mod2 <- lm(mpg ~ wt + hp, data = mtcars)
-summary(mod2)
-cor(mtcars)
+
+#Geom Density (Temp by Month)
+ggplot(airquality, aes(Temp)) +
+  geom_density() +
+  facet_grid(~Month)
+
+#Modelos - Regressão Linear Simples (Futebol)
+mod <- lm(mpg ~ wt, data = mtcars)
+summary(mod)
+
+#About
+name <- c("Orlando Gomes")
+title <- c("Microsoft Student Partner(MSP)")
+medium <- c("https://medium.com/@orlandogomes_13207")
+linkedin <- c("inkedin.com/in/orlandomariano")
+facebook <- c("facebook.com/orlandomaiuri")
+email <- c("orlando.mariano@studentpartner.com")
