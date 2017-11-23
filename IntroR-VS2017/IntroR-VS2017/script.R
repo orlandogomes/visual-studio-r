@@ -13,6 +13,7 @@ write.csv(mtcars, file = "mtcars.csv")
 mt_data <- read.csv("mtcars.csv")
 
 str(mt_data)
+head(mt_data,n=10)
 
 #Operações
 a <- 1
@@ -53,8 +54,6 @@ brinquedo <- data.frame(nome, estado, tempo)
 brinquedo
 
 #Graficos
-head(airquality, n = 10)
-
 
 #Plot Simples
 plot(mpg ~ wt, data = mtcars)
