@@ -15,7 +15,7 @@ mt_data <- read.csv("mtcars.csv")
 str(mt_data)
 head(mt_data,n=10)
 
-#Operações
+#OperaÃ§Ãµes
 a <- 1
 b <- 3
 c <- a + b
@@ -71,7 +71,7 @@ ggplot(airquality, aes(Temp)) +
   geom_density() +
   facet_grid(~Month)
 
-#Modelos - Regressão Linear Simples (Futebol)
+#Modelos - RegressÃ£o Linear Simples
 mod <- lm(mpg ~ wt, data = mtcars)
 summary(mod)
 
